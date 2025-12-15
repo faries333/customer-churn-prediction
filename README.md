@@ -20,15 +20,20 @@ Target variable:
 ## Project Structure
 ```
 customer-churn-prediction/
+├── data/
+│   ├── raw/
+│   │   └── telco_churn.csv
+│   └── processed/
 ├── notebooks/
-│ ├── 01_eda.ipynb
-│ ├── 02_feature_engineering.ipynb
-│ └── 03_modeling.ipynb
+│   ├── 01_eda.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   └── 03_modeling.ipynb
 ├── screenshots/
 ├── reports/
-│ └── business_insights.pdf
+│   └── business_insights.pdf
 ├── README.md
 └── requirements.txt
+
 ```
 
 ---
