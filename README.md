@@ -1,29 +1,74 @@
 # Customer Churn Prediction
 
 ## Problem Statement
-Predict whether a telecom customer is likely to churn in order to enable proactive retention strategies.
+Customer churn directly impacts revenue in subscription-based businesses.  
+This project aims to predict whether a telecom customer is likely to churn so that proactive retention actions can be taken.
+
+---
 
 ## Dataset
-Telecom customer behavior dataset containing usage, service plans, and customer service interactions.
+Telecom customer behavior dataset containing:
+- Call usage patterns (day, evening, night, international)
+- Service plans (international, voice mail)
+- Customer service interaction frequency
+
+Target variable:
+- `Churn` (1 = churned, 0 = retained)
+
+---
+
+## Project Structure
+```
+customer-churn-prediction/
+├── notebooks/
+│ ├── 01_eda.ipynb
+│ ├── 02_feature_engineering.ipynb
+│ └── 03_modeling.ipynb
+├── screenshots/
+├── reports/
+│ └── business_insights.pdf
+├── README.md
+└── requirements.txt
+```
+
+---
 
 ## Approach
-- Exploratory Data Analysis (EDA)
-- Feature Engineering & Encoding
-- Baseline Logistic Regression
-- Threshold tuning for recall optimization
-- Random Forest modeling and evaluation
-- Business-driven model selection
+1. Exploratory Data Analysis (EDA)
+2. Feature engineering and encoding
+3. Baseline Logistic Regression
+4. Threshold tuning for recall optimization
+5. Random Forest modeling
+6. Business-driven model selection
 
-## Model Performance
-- Final Model: Random Forest
-- Churn Recall: 79%
-- ROC–AUC: 0.88
-- Threshold tuned to balance recall and false positives
+---
 
-## Key Insights
-- Customer service calls are the strongest churn indicator.
-- International plan customers churn at higher rates.
-- Threshold tuning significantly improves business relevance.
+## Final Model Performance
+- **Model:** Random Forest
+- **Threshold:** 0.35
+- **Churn Recall:** 79%
+- **ROC–AUC:** 0.88
+- **Goal:** Balance churn detection and retention cost
+
+---
+
+## Business Insights
+- Customers with frequent customer service calls are at the highest risk of churn.
+- International plan users churn at higher rates.
+- Higher international usage and charges increase churn probability.
+- Threshold tuning significantly improves business relevance of predictions.
+
+---
 
 ## Tools & Technologies
-Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- Matplotlib, Seaborn
+
+---
+
+## Future Improvements
+- Hyperparameter tuning
+- XGBoost comparison
+- Model deployment as an API
